@@ -30,7 +30,7 @@ const router = createBrowserRouter([
     path: "settings",
     element: <Settings/>,
   },{
-    path: "hack",
+    path: "hacks",
     element: <Hack/>,
   },
 ]);
@@ -44,9 +44,10 @@ function App() {
       </motion.div>
       
       <motion.div className="h-screen top-12 w-full flex flex-row">
+        
         <SideBar />
         
-        <motion.div className="w-full bg-[#1A1A40] rounded-tl-2xl p-2">
+        <motion.div className="w-full max-h-screen bg-[#1A1A40] rounded-tl-2xl p-4">
           <RouterProvider router={router} />
         </motion.div>
 

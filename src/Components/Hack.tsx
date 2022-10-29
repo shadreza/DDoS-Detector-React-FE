@@ -2,7 +2,7 @@ import React from 'react'
 
 function Hack() {
   return (
-    <div>Hack</div>
+    <div className="text-white">Hack</div>
   )
 }
 

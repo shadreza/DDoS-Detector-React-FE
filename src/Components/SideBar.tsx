@@ -22,8 +22,8 @@ function SideBar() {
           <a href='/settings'>
             <Button title="Settings"/>
           </a>
-          <a href='/hack'>
-            <Button title="Hack" />
+          <a href='/hacks'>
+            <Button title="Hack History" />
           </a>
   
         </motion.div>
