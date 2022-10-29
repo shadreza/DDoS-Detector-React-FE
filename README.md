@@ -1,3 +1,3 @@
 ## Live link :
 
-**https://ddos-detector-of3e4jkyc-shadreza.vercel.app/**
+**https://ddos-detector-movasufw7-shadreza.vercel.app/**
