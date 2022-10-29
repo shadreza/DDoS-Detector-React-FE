@@ -1,6 +1,5 @@
 import React from 'react';
 import { motion } from "framer-motion"
-import Button from './Components/Button';
 import Header from './Components/Header';
 import {
   createBrowserRouter,
@@ -8,11 +7,31 @@ import {
   Route,
   Link,
 } from "react-router-dom";
+import ErrorPage from './ErrorPage';
+import SideBar from './Components/SideBar';
+import DashBoard from './Components/DashBoard';
+import Messages from './Components/Messages';
+import Security from './Components/Security';
+import Settings from './Components/Settings';
+import Hack from './Components/Hack';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <div>Hello world!</div>,
+    element: <DashBoard/>,
+    errorElement: <ErrorPage />,
+  },{
+    path: "messages",
+    element: <Messages/>,
+  },{
+    path: "security",
+    element: <Security/>,
+  },{
+    path: "settings",
+    element: <Settings/>,
+  },{
+    path: "hack",
+    element: <Hack/>,
   },
 ]);
 
@@ -25,21 +44,12 @@ function App() {
       </motion.div>
       
       <motion.div className="h-screen top-12 w-full flex flex-row">
-        <motion.div className="w-[20rem] p-2 relative">
-          <p className="text-4xl font-bold  animate-pulse mb-10 cursor-pointer relative top-[-2rem] left-[1rem]">
-            <span className="text-red-400 underline">DDoS</span> <span className="text-orange-400 underline">Detector</span>
-          </p>
-          <motion.div className="flex flex-col gap-4 relative top-[-1rem]">
-            <Button title="Dashboard"/>
-            <Button title="Messages" />
-            <Button title="Security" />
-            <Button title="Settings" />
-            <Button title="Hack" />
-          </motion.div>
-        </motion.div>
+        <SideBar />
+        
         <motion.div className="w-full bg-[#1A1A40] rounded-tl-2xl p-2">
           <RouterProvider router={router} />
         </motion.div>
+
       </motion.div>
 
     </motion.div>
